@@ -92,7 +92,9 @@ export default function ChatWidget() {
       {open && (
         <div className="chat-panel" role="dialog" aria-label="Infusions Tech assistant">
           <div className="chat-head">
-            <div className="chat-avatar">i</div>
+            <div className="chat-avatar">
+              <img src="/logo.png" alt="Infusions Tech" />
+            </div>
             <div className="chat-head-text">
               <b>Infusions Tech Assistant</b>
               <span>Online 24/7 · English & বাংলা</span>

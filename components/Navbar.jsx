@@ -1,26 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navLinks } from "@/lib/data";
 
-// Import your uploaded SVG file
-import icon from "@/app/icon.svg";
-
-export function Logo() {
+// tile = put the logo on a white rounded tile (needed on dark backgrounds)
+export function Logo({ tile = false }) {
   return (
     <span className="logo">
-      {/* Replaced the text "i" with the Next.js Image component */}
-      <Image 
-        src={icon} 
-        alt="Infusions Tech Logo" 
-        width={36} 
-        height={36} 
-        className="logo-mark"
-        priority
-      />
+      <img src="/logo.png" alt="" width="40" height="40" className={`logo-img ${tile ? "logo-tile" : ""}`} />
       <span className="logo-text">
         <span>INFUSIONS</span>
         <span>TECH</span>

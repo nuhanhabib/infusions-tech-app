@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <Logo />
+            <Logo tile />
             <p>{company.description}</p>
           </div>
           <div>
