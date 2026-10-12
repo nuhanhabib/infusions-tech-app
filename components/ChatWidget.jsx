@@ -97,7 +97,7 @@ export default function ChatWidget() {
             </div>
             <div className="chat-head-text">
               <b>Infusions Tech Assistant</b>
-              <span>Online 24/7 · English & বাংলা</span>
+              <span>Online </span>
             </div>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" title="Talk to our team on WhatsApp" aria-label="WhatsApp">
               💬
