@@ -1,0 +1,42 @@
+.site-footer { background: #fcfbf9; color: #1a1f36; padding: 64px 0 26px; border-top: 1px solid #efece6; }
+.sf-grid { display: grid; grid-template-columns: 1.35fr 0.9fr 0.8fr 1.3fr; gap: 40px; align-items: start; }
+@media (max-width: 1000px) { .sf-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .sf-grid { grid-template-columns: 1fr; gap: 30px; } }
+
+.site-footer a { transition: color 0.15s; }
+.site-footer a:hover { color: var(--orange); }
+
+.sf-brand .logo { margin-bottom: 4px; }
+.sf-tagline { margin-top: 14px; font-size: 17px; line-height: 1.45; max-width: 240px; color: #1a1f36; }
+.sf-office { margin-top: 26px; font-size: 17px; }
+.sf-contact { list-style: none; display: grid; gap: 12px; margin-top: 14px; }
+.sf-contact li { display: flex; gap: 12px; align-items: flex-start; font-size: 14px; font-weight: 600; line-height: 1.5; }
+.sf-contact svg { color: var(--orange); flex: none; margin-top: 2px; }
+
+.sf-col h4 { font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: var(--blue, #1d3c8f); font-weight: 600; margin-bottom: 16px; }
+.sf-col h4 a:hover { color: var(--orange); }
+.sf-col ul { list-style: none; display: grid; gap: 14px; }
+.sf-col li a { font-size: 15px; }
+.sf-more { color: var(--blue, #1d3c8f); font-weight: 700; }
+
+.sf-news .sf-sub { margin-top: 18px; margin-bottom: 12px; }
+.sf-news p { font-size: 15px; }
+.sf-form { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+.sf-input-wrap { flex: 1; min-width: 180px; padding: 2px; border-radius: 12px; background: linear-gradient(90deg, #7c3aed, #f59e0b 55%, #34b36b); }
+.sf-input-wrap input { width: 100%; height: 48px; border: 0; border-radius: 10px; padding: 0 16px; font: inherit; font-size: 15px; background: #fff; color: #1a1f36; }
+.sf-input-wrap input:focus { outline: none; box-shadow: 0 0 0 3px rgba(255, 122, 24, 0.25); }
+.sf-form button { width: 52px; height: 52px; border: 0; border-radius: 10px; background: var(--navy); color: #fff; font-size: 20px; cursor: pointer; transition: background 0.15s, transform 0.15s; }
+.sf-form button:hover { background: var(--orange); transform: translateY(-1px); }
+.sf-msg { flex-basis: 100%; font-size: 13px !important; }
+.sf-msg.error { color: #c2410c; }
+.sf-msg.ok { color: #047857; }
+
+.sf-social { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.sf-social a {
+  width: 44px; height: 44px; border-radius: 50%; background: #fff; color: #1a1f36;
+  display: grid; place-items: center; box-shadow: 0 4px 14px rgba(20, 30, 60, 0.12);
+  transition: transform 0.15s, background 0.15s, color 0.15s;
+}
+.sf-social a:hover { background: var(--orange); color: #fff; transform: translateY(-3px); }
+
+.sf-copy { border-top: 1px solid #ebe7df; margin-top: 44px; padding-top: 22px; font-size: 14px; color: #3b4157; }

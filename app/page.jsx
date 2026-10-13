@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ServiceCard from "@/components/ServiceCard";
-import { advantages, company, featuredServices } from "@/lib/data";
+import { advantages, company, featuredSlugs } from "@/lib/data";
 
 const advIcons = ["🧩", "🌐", "✅", "🚀"];
 
@@ -36,9 +36,9 @@ export default function Home() {
           <p className="section-sub">
             Six specialized capabilities under one accountable partner, from creative production to engineering, security, and growth.
           </p>
-          <div className="cards">
-            {featuredServices.map((s) => (
-              <ServiceCard key={s.title} {...s} />
+          <div className="svc-grid">
+            {featuredSlugs.map((slug) => (
+              <ServiceCard key={slug} slug={slug} />
             ))}
           </div>
           <div className="center">

@@ -1,24 +1,20 @@
 import Link from "next/link";
+import Icon from "@/components/Icon";
 import ServiceCard from "@/components/ServiceCard";
-import { serviceGroups } from "@/lib/data";
+import { serviceDetails } from "@/lib/serviceDetails";
 
-export const metadata = { title: "Services" };
-
-const icons = {
-  "Software Development": "💻",
-  "Web Design & Development": "🌐",
-  "Mobile App Development": "📱",
-  "AI & Automation Solutions": "🤖",
-  "Cyber Security": "🛡️",
-  "Digital Marketing": "📈",
-  "Graphics Design": "🎨",
-  "UX/UI Design": "🧭",
-  "Motion Graphics": "✨",
-  "Video Editing": "🎬",
-  "Fusion Studio": "🎥",
-  "Business & Digital Consulting": "🧠",
-  "Complete Branding Solution": "🏷️",
+export const metadata = {
+  title: "Services",
+  description:
+    "Software, web and mobile development, AI and automation, cyber security, digital marketing, design, studio, strategy and branding from one accountable team.",
 };
+
+const steps = [
+  { icon: "search", title: "Discovery", text: "We dig into your goals, users, and constraints first." },
+  { icon: "compass", title: "Architecture", text: "Scalable systems and intuitive UX, planned up front." },
+  { icon: "settings", title: "Engineering", text: "Clean, tested code shipped in transparent sprints." },
+  { icon: "network", title: "Scale", text: "Automated deployment and continuous optimization." },
+];
 
 export default function Services() {
   return (
@@ -32,18 +28,30 @@ export default function Services() {
 
       <section className="section alt">
         <div className="container">
-          {serviceGroups.map((g) => (
-            <div key={g.group}>
-              <h2 className={`group-title c-${g.color}`}>
-                <span style={{ color: "var(--ink)" }}>{g.group}</span>
-              </h2>
-              <div className="cards" style={{ marginTop: 28 }}>
-                {g.items.map((s) => (
-                  <ServiceCard key={s.title} title={s.title} text={s.text} color={g.color} icon={icons[s.title]} />
-                ))}
-              </div>
-            </div>
-          ))}
+          <h2 className="svc-title">Explore Our Services</h2>
+          <div className="svc-grid">
+            {serviceDetails.map((s) => (
+              <ServiceCard key={s.slug} slug={s.slug} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="process">
+        <div className="container">
+          <h2 className="svc-title">Precision in Every Step</h2>
+          <div className="process-grid">
+            {steps.map((s, i) => (
+              <article className="process-card" key={s.title}>
+                <span className="process-num">{i + 1}</span>
+                <div className="process-ico">
+                  <Icon name={s.icon} size={24} />
+                </div>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

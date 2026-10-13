@@ -1,0 +1,33 @@
+:root { --blue: #1d3c8f; }
+
+/* ---------- Service cards (home + /services) ---------- */
+.svc-title { text-align: center; color: var(--blue); font-size: clamp(28px, 3.6vw, 40px); font-weight: 800; letter-spacing: -0.5px; }
+.svc-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-top: 44px; }
+.svc-card {
+  position: relative; width: calc((100% - 48px) / 3);
+  background: #fff; border: 1px solid #e6ebf3; border-radius: 18px; padding: 26px 24px 22px;
+  display: flex; flex-direction: column; gap: 10px;
+  box-shadow: 0 1px 2px rgba(20, 40, 90, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.svc-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(20, 40, 90, 0.12); border-color: #d7e0f0; }
+.svc-card-icon { color: var(--blue); margin-bottom: 14px; transition: color 0.2s; }
+.svc-card:hover .svc-card-icon { color: var(--orange); }
+.svc-card h3 { color: var(--blue); font-size: 19px; line-height: 1.3; font-weight: 700; }
+.svc-card p { color: #5d6678; font-size: 14px; line-height: 1.65; flex: 1; }
+.svc-card-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; color: var(--orange); font-weight: 700; font-size: 14px; width: fit-content; }
+.svc-card-link::after { content: ""; position: absolute; inset: 0; border-radius: 18px; }
+.svc-card-link svg { transition: transform 0.2s; }
+.svc-card:hover .svc-card-link svg { transform: translateX(4px); }
+@media (max-width: 960px) { .svc-card { width: calc((100% - 24px) / 2); } }
+@media (max-width: 620px) { .svc-card { width: 100%; } }
+
+/* ---------- Precision in Every Step ---------- */
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 44px; }
+@media (max-width: 960px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .process-grid { grid-template-columns: 1fr; } }
+.process-card { position: relative; background: #fff; border: 1px solid #e6ebf3; border-radius: 18px; padding: 30px 22px 26px; text-align: center; box-shadow: 0 1px 2px rgba(20, 40, 90, 0.04); }
+.process-ico { width: 54px; height: 54px; border-radius: 50%; margin: 0 auto 16px; display: grid; place-items: center; background: #fff; color: var(--blue); box-shadow: 0 6px 18px rgba(20, 40, 90, 0.12); }
+.process-num { position: absolute; top: 16px; right: 18px; width: 22px; height: 22px; border-radius: 6px; background: var(--orange); color: #fff; font-size: 12px; font-weight: 800; display: grid; place-items: center; }
+.process-card h3 { color: var(--blue); font-size: 20px; margin-bottom: 6px; }
+.process-card p { color: #5d6678; font-size: 14px; }
