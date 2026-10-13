@@ -16,7 +16,11 @@ export default function About() {
       <section className="section">
         <div className="container" style={{ maxWidth: 860 }}>
           <p style={{ fontSize: 18, color: "var(--muted)" }}>
-            We help businesses build their digital foundation and grow on it, so you work with one accountable team instead of managing separate vendors for software, design, content and marketing. Based in Dhaka, we work with businesses in Bangladesh and around the world.
+            Infusions Tech was founded on a simple belief : businesses shouldn’t need five different vendors to run one digital operation. Creative, engineering, security, and marketing belong in one accountable team.
+
+            Today, from our home base in Dhaka, Bangladesh, we serve clients around the world — from a single promotional video to full-scale software platforms.
+
+            We measure our success by one metric only : the growth of the businesses we partner with.
           </p>
         </div>
       </section>

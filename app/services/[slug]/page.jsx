@@ -34,7 +34,6 @@ export default async function ServicePage({ params }) {
           <span className="kicker">{s.title}</span>
           <h1>{s.heading}</h1>
           <p>{s.tagline}</p>
-          <Link href="/contact" className="btn btn-orange">{ctaButton}</Link>
         </div>
       </section>
 
