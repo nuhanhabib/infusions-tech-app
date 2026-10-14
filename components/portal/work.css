@@ -1,0 +1,17 @@
+.wk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
+.wk-card { display: flex; flex-direction: column; background: var(--card); border-radius: var(--radius); overflow: hidden; box-shadow: 10px 12px 30px rgba(120, 160, 200, 0.25); transition: transform 0.2s; }
+a.wk-card:hover { transform: translateY(-6px); }
+.wk-card img, .wk-noimg { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.wk-noimg { display: grid; place-items: center; font-size: 56px; font-weight: 800; color: #fff; background: linear-gradient(135deg, var(--purple), var(--orange)); }
+.wk-body { padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+.wk-body h3 { font-size: 20px; }
+.wk-body p { color: var(--muted); font-size: 15px; }
+.wk-link { color: var(--orange-d); font-weight: 700; margin-top: 4px; }
+.wk-reviews { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; margin-top: 40px; }
+.wk-review { margin: 0; background: var(--card); border-radius: var(--radius); padding: 28px; box-shadow: 10px 12px 30px rgba(120, 160, 200, 0.2); display: flex; flex-direction: column; gap: 14px; }
+.wk-review .pt-stars { color: #d6dfea; letter-spacing: 2px; font-size: 18px; }
+.wk-review .pt-stars .on { color: #f59e0b; }
+.wk-review blockquote { font-size: 16px; line-height: 1.6; white-space: pre-wrap; word-break: break-word; }
+.wk-review figcaption { color: var(--muted); font-size: 14px; }
+.wk-review figcaption b { color: var(--ink); }
+.wk-review figcaption small { display: block; margin-top: 2px; }

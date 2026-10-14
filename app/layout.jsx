@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import SiteChrome from "@/components/SiteChrome";
 
 export const metadata = {
   title: {
@@ -22,12 +23,16 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <Navbar />
+        <SiteChrome>
+          <Navbar />
+        </SiteChrome>
         <main>{children}</main>
-        <Footer />
-        <ChatWidget />
+        <SiteChrome>
+          <Footer />
+          <ChatWidget />
+        </SiteChrome>
       </body>
     </html>
   );

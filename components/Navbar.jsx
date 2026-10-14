@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navLinks } from "@/lib/data";
+import "./navextra.css";
 
 // tile = put the logo on a white rounded tile (needed on dark backgrounds)
 export function Logo({ tile = false }) {
@@ -40,6 +41,13 @@ export default function Navbar() {
                 {l.label}
               </Link>
             ))}
+            <Link
+              href="/login"
+              className={`nav-login ${pathname === "/login" ? "active" : ""}`}
+              onClick={() => setOpen(false)}
+            >
+              Login
+            </Link>
           </div>
           <Link href="/contact" className="btn btn-orange btn-pill nav-cta" onClick={() => setOpen(false)}>
             Contact Us

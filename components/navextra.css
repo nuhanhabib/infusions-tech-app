@@ -1,0 +1,16 @@
+/* Login button + "Work" link in the public navbar */
+.nav-links a.nav-login {
+  border: 1.5px solid var(--navy);
+  border-radius: 999px;
+  padding: 6px 18px;
+  color: var(--navy);
+}
+.nav-links a.nav-login:hover,
+.nav-links a.nav-login.active {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+@media (max-width: 820px) {
+  .nav.open .nav-links a.nav-login { text-align: center; }
+}
