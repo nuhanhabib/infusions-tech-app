@@ -1,6 +1,26 @@
-// Runs before the page paints so the saved light/dark theme shows with no flash.
-const code = `(function(){try{var t=localStorage.getItem('it-portal-theme');if(t!=='dark'&&t!=='light'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.dataset.ptheme=t}catch(e){}})();`;
+
+"use client";
+
+import { useEffect } from "react";
 
 export default function ThemeScript() {
-  return <script dangerouslySetInnerHTML={{ __html: code }} />;
+  useEffect(() => {
+    try {
+      let theme = localStorage.getItem("it-portal-theme");
+
+      if (theme !== "dark" && theme !== "light") {
+        theme = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches
+          ? "dark"
+          : "light";
+      }
+
+      document.documentElement.dataset.ptheme = theme;
+    } catch (error) {
+      document.documentElement.dataset.ptheme = "light";
+    }
+  }, []);
+
+  return null;
 }
