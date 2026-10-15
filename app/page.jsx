@@ -1,5 +1,7 @@
 import Link from "next/link";
 import ServiceCard from "@/components/ServiceCard";
+import StatsBand from "@/components/StatsBand";
+import ClientsMarquee from "@/components/ClientsMarquee";
 import { advantages, company, featuredSlugs } from "@/lib/data";
 
 const advIcons = ["🧩", "🌐", "✅", "🚀"];
@@ -47,6 +49,8 @@ export default function Home() {
         </div>
       </section>
 
+      <StatsBand />
+
       <section className="section">
         <div className="container">
           <h2 className="section-title">The Infusions Advantage</h2>
@@ -75,6 +79,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ClientsMarquee />
 
       <section className="cta">
         <div className="container">
